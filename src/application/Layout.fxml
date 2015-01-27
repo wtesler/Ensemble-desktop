@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="grid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 1; -fx-border-insets: 2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LayoutController">
+	<columnConstraints>
+		<ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="25.0" />
+		<ColumnConstraints hgrow="SOMETIMES" maxWidth="478.0" minWidth="10.0" prefWidth="218.0" />
+		<ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="29.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints maxHeight="192.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="192.0" minHeight="4.0" prefHeight="15.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="278.0" minHeight="10.0" prefHeight="243.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="268.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="72.0" minHeight="5.0" prefHeight="24.0" vgrow="SOMETIMES" />
+	</rowConstraints>
+	<padding>
+		<Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+	</padding>
+	<children>
+		<Label text="Semble" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+			<font>
+				<Font name="Euphemia" size="48.0" />
+			</font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#000000e1" />
+                  <Stop color="#000000ba" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+		</Label>
+		<Label text="Torrent Client by Will Tesler" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+		<TextField fx:id="tf_outdir" editable="false" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Choose Output Folder..." GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+		<ImageView fx:id="iv_qr" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+			<image>
+				<Image url="@../../res/black-hex.png" />
+			</image>
+		</ImageView>
+		<Label fx:id="l_instructions" text="Scan with companion app." visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+		<Button fx:id="bt_skip" mnemonicParsing="false" text="Skip" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+		<TextField fx:id="tf_loadtorrent" editable="false" focusTraversable="false" layoutX="238.0" layoutY="339.0" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Choose Torrent File..." GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <ImageView fx:id="iv_exit" fitHeight="25.0" fitWidth="25.0" opacity="0.66" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <image>
+            <Image url="@../../res/btn_close_normal.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+	</children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</GridPane>
